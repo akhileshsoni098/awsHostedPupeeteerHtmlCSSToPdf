@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 (async () => {
   try {
     await puppeteer.defaultArgs({
-      executablePath: "/opt/render/project/src/node_modules/puppeteer-core/lib/cjs/puppeteer/node/ChromeLauncher.js",
+      executablePath: '/usr/bin/google-chrome' ,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
       headless: 'new',
     });

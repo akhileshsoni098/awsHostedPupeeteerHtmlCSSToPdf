@@ -31,12 +31,12 @@ const htmlToPdf = require("./route.js")
 
 app.get('/test', (req, res) => {
 
-  res.status(200).json({staus:true , message:"api is working..."})
+  res.status(200).json({staus:true , message:"api is working great..."})
 
 });
 
 
-app.get('/', async (req, res) => {
+app.get('/api/', async (req, res) => {
   try {
     const filePath = path.join(__dirname, 'new.html');
     res.sendFile(filePath);
@@ -45,6 +45,7 @@ app.get('/', async (req, res) => {
     res.status(500).send('Error sending the file');
   }
 });
+
 
 app.use("/", htmlToPdf)
 
