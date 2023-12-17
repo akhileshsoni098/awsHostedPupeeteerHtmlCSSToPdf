@@ -2,7 +2,6 @@
 
 const puppeteer = require('puppeteer');
 
-
 (async () => {
   try {
     await puppeteer.defaultArgs({
@@ -32,7 +31,7 @@ exports.htmlTopdf =  async (req, res) => {
     // Generate PDF
     const pdfBuffer = await page.pdf({
       format: 'Letter',
-      margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' },
+      margin: { top: '0mm', bottom: '0mm', left: '0mm', right: '0mm' },
       printBackground: true,
     });
 
@@ -48,7 +47,30 @@ exports.htmlTopdf =  async (req, res) => {
   }
 };
 
-  
+   
+
+
+
+//////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Modify the API endpoint to include the CSS styles in the request body
 /* 
