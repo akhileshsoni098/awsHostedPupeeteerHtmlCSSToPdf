@@ -1,6 +1,5 @@
 
-// credentials = require('./middi/credentials.js');
-// const corsOptions = require('./config/corsOptions.js');
+
 const express =require("express")
 const path = require("path")
 const cors = require("cors")
@@ -13,15 +12,10 @@ app.use(express.json())
 
 app.setMaxListeners(15)
 
-// app.use(cors({
-//   origin: "http://localhost:3000",
-  
-// }))
 
-// app.use(cors(corsOptions));
 
 app.use(cors({
-  origin: 'https://resume-builder-nwa948ev0-sachinsingh800.vercel.app', 
+  origin: '*',
   optionsSuccessStatus: 200 
 }));
 
