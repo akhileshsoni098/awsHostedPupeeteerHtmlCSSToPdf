@@ -20,7 +20,10 @@ app.setMaxListeners(15)
 
 // app.use(cors(corsOptions));
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://resume-builder-nwa948ev0-sachinsingh800.vercel.app', 
+  optionsSuccessStatus: 200 
+}));
 
    
 //  for route
@@ -35,6 +38,8 @@ app.get('/test', (req, res) => {
 
 });
  
+
+
 /* 
 app.get('/api/', async (req, res) => {
   try {
